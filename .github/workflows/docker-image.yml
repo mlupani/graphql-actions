@@ -23,6 +23,7 @@ jobs:
       with:
         minor_pattern: "major:"
         major_pattern: "feat:"
+        patch_pattern: "fix:"
         format: "${major}.${minor}.${patch}-prerelease${increment}"
       id: version
 
@@ -33,7 +34,6 @@ jobs:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-        echo "nueva version: ${{ nueva version: $NEW_VERSION }}"
 
     # - name: Docker Build Image
     #   run: |
