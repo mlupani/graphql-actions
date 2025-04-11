@@ -28,10 +28,12 @@ jobs:
     - name: Docker Build Image
       run: |
         docker build -t migue0208/graphql-actions:0.0.2 .
+        docker build -t migue0208/graphql-actions:latest .
 
     - name: Docker Push Image
       run: |
         docker push migue0208/graphql-actions:0.0.2
+        docker push migue0208/graphql-actions:latest
         
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
